@@ -25,7 +25,15 @@ import streamlit as st
 from dotenv import load_dotenv
 
 # ─── Load environment variables ───────────────
-load_dotenv()
+load_dotenv()  # loads .env locally
+
+# Support Streamlit Cloud secrets (st.secrets) as well
+try:
+    import streamlit as _st_check
+    if hasattr(_st_check, "secrets") and "ANTHROPIC_API_KEY" in _st_check.secrets:
+        os.environ["ANTHROPIC_API_KEY"] = _st_check.secrets["ANTHROPIC_API_KEY"]
+except Exception:
+    pass
 
 # ─── Configure logging ────────────────────────
 logging.basicConfig(
