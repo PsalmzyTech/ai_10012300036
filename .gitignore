@@ -1,0 +1,31 @@
+# Environment variables (NEVER commit API keys)
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# FAISS index (large binary, rebuild from data)
+index/faiss.index
+index/chunks.json
+
+# Logs (optional - comment out if you want to track them)
+logs/app.log
+logs/feedback.jsonl
+
+# Claude Code session data
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
