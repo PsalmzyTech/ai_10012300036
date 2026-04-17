@@ -2,6 +2,8 @@
 app.py  -  FINAL DELIVERABLE: Streamlit UI
 CS4241 - Introduction to Artificial Intelligence
 Academic City University
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 RAG Chatbot for Ghana 2025 Budget Statement & Election Results
 
@@ -196,6 +198,9 @@ with st.sidebar:
         st.success("Memory cleared!")
 
     st.divider()
+    st.divider()
+    st.caption("**Daniel Kingsley Bright Amusah**")
+    st.caption("Index: 10012300036")
     st.caption("CS4241 – Introduction to Artificial Intelligence")
     st.caption("Academic City University • 2026")
 

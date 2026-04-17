@@ -1,6 +1,8 @@
 """
 generator.py  -  LLM Response Generation
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Wraps the Anthropic Claude API for response generation.
 Model: claude-haiku-4-5-20251001 (fast, cost-effective for RAG answers)
@@ -23,6 +25,8 @@ logger = logging.getLogger(__name__)
 
 def _get_client() -> anthropic.Anthropic:
     """Create an Anthropic client using ANTHROPIC_API_KEY env var."""
+    from dotenv import load_dotenv
+    load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"), override=True)
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
         raise EnvironmentError(

@@ -2,6 +2,9 @@
 ## CS4241 – Introduction to Artificial Intelligence
 ### RAG System Chatbot — Experiment Records
 
+**Student Name:** Daniel Kingsley Bright Amusah
+**Index Number:** 10012300036
+
 > **Note:** These are manually written experiment observations, NOT AI-generated summaries.
 
 ---

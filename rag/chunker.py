@@ -1,6 +1,8 @@
 """
 chunker.py  -  PART A: Chunking Strategies
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Implements THREE chunking strategies with justification:
 
@@ -199,7 +201,7 @@ def chunk_documents(
             chunks = strategy_fn(doc, **kwargs)
             all_chunks.extend(chunks)
 
-    logger.info(f"Chunking ({strategy}): {len(docs)} docs → {len(all_chunks)} chunks")
+    logger.info(f"Chunking ({strategy}): {len(docs)} docs -> {len(all_chunks)} chunks")
     return all_chunks
 
 

@@ -1,6 +1,8 @@
 """
 prompt_builder.py  -  PART C: Prompt Engineering & Generation
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Implements:
   1. Structured prompt template with context injection

@@ -1,8 +1,8 @@
 # Academic City RAG Chatbot
 ## CS4241 – Introduction to Artificial Intelligence | End of Semester Exam 2026
 
-**Student Name:** [Your Name Here]  
-**Index Number:** [Your Index Number Here]  
+**Student Name:** Daniel Kingsley Bright Amusah  
+**Index Number:** 10012300036  
 **Lecturer:** Godwin N. Danso  
 
 ---

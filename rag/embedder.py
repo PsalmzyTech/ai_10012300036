@@ -1,6 +1,8 @@
 """
 embedder.py  -  PART B: Embedding Pipeline
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Implements a custom embedding pipeline using sentence-transformers.
 Model: all-MiniLM-L6-v2

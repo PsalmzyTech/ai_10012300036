@@ -3,6 +3,10 @@ build_index.py
 Run this ONCE to pre-build the FAISS index before starting the Streamlit app.
 This avoids the first-run delay inside the app.
 
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
+CS4241 - Introduction to Artificial Intelligence
+
 Usage:
     python build_index.py
 """

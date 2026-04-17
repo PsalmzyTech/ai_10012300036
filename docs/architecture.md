@@ -2,6 +2,9 @@
 ## CS4241 – Introduction to Artificial Intelligence
 ### RAG Chatbot — Part F: Architecture & System Design
 
+**Student Name:** Daniel Kingsley Bright Amusah
+**Index Number:** 10012300036
+
 ---
 
 ## 1. Overview

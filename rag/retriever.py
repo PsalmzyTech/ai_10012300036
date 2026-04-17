@@ -1,6 +1,8 @@
 """
 retriever.py  -  PART B: Custom Retrieval System
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Implements:
   1. Top-k vector retrieval with cosine similarity scores

@@ -1,6 +1,8 @@
 """
 vector_store.py  -  PART B: Vector Storage
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Custom FAISS-based vector store with:
   - IndexFlatIP (inner product on L2-normalised vectors = cosine similarity)

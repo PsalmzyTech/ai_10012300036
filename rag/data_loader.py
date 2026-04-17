@@ -1,6 +1,8 @@
 """
 data_loader.py  -  PART A: Data Engineering & Preparation
 CS4241 - Introduction to Artificial Intelligence
+Student Name:  Daniel Kingsley Bright Amusah
+Index Number:  10012300036
 
 Loads and cleans both data sources:
   1. 2025 Ghana Budget Statement PDF (252 pages)
