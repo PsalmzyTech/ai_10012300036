@@ -20,8 +20,10 @@ Part G extras:
 
 import os
 import sys
+import base64
 import logging
 import streamlit as st
+from pathlib import Path
 from dotenv import load_dotenv
 
 # ─── Load environment variables ───────────────
@@ -53,6 +55,100 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# ─── Blurred campus background ───────────────
+def set_bg_image(image_path: str, blur: int = 6, brightness: float = 0.45):
+    """Inject CSS to use a local image as a blurred, darkened full-page background."""
+    img_path = Path(image_path)
+    if not img_path.exists():
+        return
+    with open(img_path, "rb") as f:
+        encoded = base64.b64encode(f.read()).decode()
+    ext = img_path.suffix.lower().replace(".", "")
+    mime = "jpeg" if ext in ("jpg", "jpeg") else ext
+
+    st.markdown(f"""
+    <style>
+    /* ── full-page background ── */
+    .stApp {{
+        background-image: url("data:image/{mime};base64,{encoded}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    /* blur + darken overlay */
+    .stApp::before {{
+        content: "";
+        position: fixed;
+        inset: 0;
+        backdrop-filter: blur({blur}px);
+        -webkit-backdrop-filter: blur({blur}px);
+        background: rgba(0, 0, 0, {1 - brightness});
+        z-index: 0;
+    }}
+    /* ensure all content sits above the overlay */
+    .stApp > * {{
+        position: relative;
+        z-index: 1;
+    }}
+    /* glass-card effect for main content blocks */
+    [data-testid="stVerticalBlock"] > [data-testid="stVerticalBlock"],
+    [data-testid="stChatMessageContent"],
+    .stTabs [data-baseweb="tab-panel"] {{
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 0.5rem;
+    }}
+    /* sidebar semi-transparent */
+    [data-testid="stSidebar"] {{
+        background: rgba(0, 20, 60, 0.75) !important;
+        backdrop-filter: blur(10px);
+    }}
+    [data-testid="stSidebar"] * {{
+        color: #e8eaf6 !important;
+    }}
+    /* headings bright white */
+    h1, h2, h3, h4 {{
+        color: #ffffff !important;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }}
+    /* chat bubbles */
+    [data-testid="stChatMessageContent"] {{
+        background: rgba(255, 255, 255, 0.12) !important;
+        border: 1px solid rgba(255,255,255,0.18);
+        color: #f0f0f0 !important;
+    }}
+    /* input box */
+    [data-testid="stChatInputTextArea"] {{
+        background: rgba(255,255,255,0.15) !important;
+        color: white !important;
+        border: 1px solid rgba(255,255,255,0.3) !important;
+    }}
+    /* tab labels */
+    button[data-baseweb="tab"] {{
+        color: #cfd8dc !important;
+        font-weight: 600;
+    }}
+    button[data-baseweb="tab"][aria-selected="true"] {{
+        color: #ffffff !important;
+        border-bottom: 3px solid #42a5f5 !important;
+    }}
+    /* metric text */
+    [data-testid="stMetricValue"] {{
+        color: #80cbc4 !important;
+    }}
+    /* general text */
+    p, li, label, span {{
+        color: #e0e0e0 !important;
+    }}
+    /* expander headers */
+    [data-testid="stExpander"] summary {{
+        color: #b3e5fc !important;
+    }}
+    </style>
+    """, unsafe_allow_html=True)
+
+set_bg_image("assets/campus.jpg", blur=7, brightness=0.45)
 
 # ─── Lazy-load the pipeline ───────────────────
 @st.cache_resource(show_spinner="Building knowledge index (first run may take ~2 min)...")
