@@ -165,7 +165,7 @@ def load_pipeline():
 
 with st.sidebar:
     st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Academic_City_University_College_Ghana_Logo.png/200px-Academic_City_University_College_Ghana_Logo.png",
-             use_column_width=True)
+             use_container_width=True)
 
     st.title("RAG Settings")
 

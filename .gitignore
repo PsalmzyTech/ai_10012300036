@@ -15,9 +15,9 @@ env/
 # Streamlit
 .streamlit/secrets.toml
 
-# FAISS index (large binary, rebuild from data)
-index/faiss.index
-index/chunks.json
+# FAISS index is committed so Streamlit Cloud loads instantly
+# index/faiss.index
+# index/chunks.json
 
 # Logs (optional - comment out if you want to track them)
 logs/app.log
