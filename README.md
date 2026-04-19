@@ -78,19 +78,6 @@ See [docs/architecture.md](docs/architecture.md) for the full architecture diagr
 
 ---
 
-## Parts Coverage
-
-| Part | Description | Marks |
-|------|-------------|-------|
-| A | Data Engineering & Chunking | 4 |
-| B | Custom Retrieval (FAISS + Query Expansion) | 6 |
-| C | Prompt Engineering (3 templates + experiments) | 4 |
-| D | Full Pipeline with Logging | 10 |
-| E | Adversarial Evaluation (RAG vs Pure LLM) | 6 |
-| F | Architecture Diagram & Justification | 8 |
-| G | Innovation: Memory + Feedback Loop | 6 |
-| Final | App + Video + Logs + Docs | 16 |
-| **Total** | | **60** |
 
 ---
 
