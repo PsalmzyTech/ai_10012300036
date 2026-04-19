@@ -122,9 +122,12 @@ def set_bg_image(image_path: str, blur: int = 6, brightness: float = 0.45):
     }}
     /* input box */
     [data-testid="stChatInputTextArea"] {{
-        background: rgba(255,255,255,0.15) !important;
-        color: white !important;
-        border: 1px solid rgba(255,255,255,0.3) !important;
+        background: rgba(255,255,255,0.92) !important;
+        color: #111111 !important;
+        border: 1px solid rgba(0,0,0,0.2) !important;
+    }}
+    [data-testid="stChatInputTextArea"]::placeholder {{
+        color: #666666 !important;
     }}
     /* tab labels */
     button[data-baseweb="tab"] {{
