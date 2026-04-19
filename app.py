@@ -120,6 +120,26 @@ def set_bg_image(image_path: str, blur: int = 6, brightness: float = 0.45):
         border: 1px solid rgba(255,255,255,0.18);
         color: #f0f0f0 !important;
     }}
+    /* selectbox - main box */
+    [data-baseweb="select"] > div {{
+        background: rgba(255,255,255,0.92) !important;
+        color: #111111 !important;
+        border: 1px solid rgba(0,0,0,0.2) !important;
+    }}
+    /* selectbox - selected value text */
+    [data-baseweb="select"] span {{
+        color: #111111 !important;
+    }}
+    /* selectbox - dropdown menu */
+    [data-baseweb="popover"] * {{
+        background: #ffffff !important;
+        color: #111111 !important;
+    }}
+    /* selectbox - hovered option */
+    [data-baseweb="menu"] li:hover {{
+        background: #e8f0fe !important;
+        color: #000000 !important;
+    }}
     /* input box */
     [data-testid="stChatInputTextArea"] {{
         background: rgba(255,255,255,0.92) !important;
