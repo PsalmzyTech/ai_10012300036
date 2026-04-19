@@ -201,7 +201,6 @@ with st.sidebar:
     st.divider()
     st.caption("**Daniel Kingsley Bright Amusah**")
     st.caption("Index: 10012300036")
-    st.caption("CS4241 – Introduction to Artificial Intelligence")
     st.caption("Academic City University • 2026")
 
 
