@@ -1,5 +1,5 @@
 # Academic City RAG Chatbot
-## CS4241 – Introduction to Artificial Intelligence | End of Semester Exam 2026
+##  – Introduction to Artificial Intelligence | End of Semester Exam 2026
 
 **Student Name:** Daniel Kingsley Bright Amusah  
 **Index Number:** 10012300036  
@@ -23,8 +23,8 @@ Academic City University. The system allows users to chat with:
 
 ## Live Demo
 
-**Deployed App:** [Insert Streamlit Cloud URL after deployment]  
-**GitHub Repo:** [Insert GitHub URL]
+**Deployed App:** [https://ai10012300036-h3ojtgbydesmref7ldxykf.streamlit.app/]  
+**GitHub Repo:** [https://github.com/PsalmzyTech/ai_10012300036]
 
 ---
 
