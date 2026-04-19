@@ -126,8 +126,11 @@ def set_bg_image(image_path: str, blur: int = 6, brightness: float = 0.45):
         color: #111111 !important;
         border: 1px solid rgba(0,0,0,0.2) !important;
     }}
-    /* selectbox - selected value text */
-    [data-baseweb="select"] span {{
+    /* selectbox - selected value text (all children) */
+    [data-baseweb="select"] span,
+    [data-baseweb="select"] div,
+    [data-baseweb="select"] input,
+    [data-baseweb="select"] * {{
         color: #111111 !important;
     }}
     /* selectbox - dropdown menu */
@@ -163,7 +166,11 @@ def set_bg_image(image_path: str, blur: int = 6, brightness: float = 0.45):
         color: #80cbc4 !important;
     }}
     /* general text */
-    p, li, label, span {{
+    p, li, label {{
+        color: #e0e0e0 !important;
+    }}
+    /* spans outside selectbox stay light; inside selectbox stay black */
+    span:not([data-baseweb="select"] span) {{
         color: #e0e0e0 !important;
     }}
     /* expander headers */
