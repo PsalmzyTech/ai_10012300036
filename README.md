@@ -152,4 +152,3 @@ Topics covered:
 
 **Email submission to:** godwin.danso@acity.edu.gh  
 **GitHub collaborator:** GodwinDansoAcity  
-**Email subject:** CS4241-Introduction to Artificial Intelligence-2026:[Index] [Name]
