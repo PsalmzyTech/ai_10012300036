@@ -1,5 +1,5 @@
 # Manual Experiment Log
-## CS4241 – Introduction to Artificial Intelligence
+## IT3241 – Introduction to Artificial Intelligence
 ### RAG System Chatbot — Experiment Records
 
 **Student Name:** Daniel Kingsley Bright Amusah
